@@ -64,9 +64,12 @@ namespace PolbanNewsReader
         public static FeedItem GetItem(string title)
         {
             var _feedDataSource = App.Current.Resources["feedDataSource"] as FeedDataSource;
-            var matches = _feedDataSource.Feeds.Where((item) => item.Title.Equals(title));
 
-            if (matches.Count() > 1) return matches.First();
+            for (int i = 0; i < _feedDataSource.Feeds.Count; i++)
+            {
+                if (_feedDataSource.Feeds[i].Title.Equals(title)) return _feedDataSource.Feeds[i];
+            }
+
             return null;
         }
     }
