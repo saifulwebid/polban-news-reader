@@ -89,6 +89,13 @@ namespace PolbanNewsReader
         {
             // TODO: Assign a bindable group to Me.DefaultViewModel("Group")
             // TODO: Assign a collection of bindable items to Me.DefaultViewModel("Items")
+            FeedDataSource feedDataSource = (FeedDataSource)App.Current.Resources["feedDataSource"];
+
+            if (feedDataSource != null)
+            {
+                this.DefaultViewModel["Title"] = "Polban News";
+                this.DefaultViewModel["Items"] = feedDataSource.Feeds;
+            }
 
             if (e.PageState == null)
             {
