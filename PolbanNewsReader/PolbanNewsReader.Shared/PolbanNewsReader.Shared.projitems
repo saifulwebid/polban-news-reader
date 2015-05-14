@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FeedDataSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FeedItem.cs" />
   </ItemGroup>
 </Project>
