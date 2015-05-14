@@ -72,6 +72,18 @@ namespace PolbanNewsReader
             {
                 this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
             }
+
+            Selector list = sender as Selector;
+            FeedItem selectedItem = list.SelectedItem as FeedItem;
+
+            if (selectedItem != null)
+            {
+                contentView.NavigateToString(selectedItem.Content);
+            }
+            else
+            {
+                contentView.NavigateToString("");
+            }
         }
 
         /// <summary>
@@ -258,5 +270,13 @@ namespace PolbanNewsReader
         }
 
         #endregion
+
+        private void contentView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e)
+        {
+            string errorString = "<p>Halaman tidak bisa dibuka.</p>";
+            errorString += "<p>Pesan kesalahan: " + e.WebErrorStatus.ToString() + "</p>";
+
+            contentView.NavigateToString(errorString);
+        }
     }
 }

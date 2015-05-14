@@ -103,7 +103,7 @@
             ScrollViewer.ZoomMode="Disabled">
 
             <Grid x:Name="itemDetailGrid" Margin="0,60,0,50">
-                <Grid.RowDefinitions>
+                <!--<Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
@@ -119,6 +119,22 @@
                     <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextBlockStyle}"/>
                 </StackPanel>
                 <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextBlockStyle}"/>
+                -->
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="itemTitle" Text="{Binding Title}"
+                           Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <Border x:Name="contentViewBorder" BorderBrush="Gray" BorderThickness="2"
+                        Grid.Row="1" Margin="0,15,0,20">
+                    <Grid>
+                        <WebView x:Name="contentView" NavigationFailed="contentView_NavigationFailed"/>
+                        <Rectangle x:Name="contentViewRect"/>
+                    </Grid>
+                </Border>
             </Grid>
         </ScrollViewer>
 
