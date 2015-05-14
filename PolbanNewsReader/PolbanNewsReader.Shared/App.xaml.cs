@@ -45,7 +45,7 @@ namespace PolbanNewsReader
         /// search results, and so forth.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -62,6 +62,24 @@ namespace PolbanNewsReader
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+
+                var connectionProfile = Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile();
+                if (connectionProfile != null)
+                {
+                    FeedDataSource feedDataSource = (FeedDataSource)App.Current.Resources["feedDataSource"];
+                    if (feedDataSource != null)
+                    {
+                        if (feedDataSource.Feeds.Count == 0)
+                        {
+                            await feedDataSource.GetFeedsAsync();
+                        }
+                    }
+                }
+                else
+                {
+                    var messageDialog = new Windows.UI.Popups.MessageDialog("Aplikasi ini membutuhkan koneksi Internet.");
+                    var result = messageDialog.ShowAsync();
+                }
 
                 // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
