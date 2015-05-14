@@ -16,11 +16,10 @@ namespace PolbanNewsReader
             get { return _Feeds; }
         }
 
-        public async Task<List<FeedItem>> GetFeedsAsync()
+        public async Task GetFeedsAsync()
         {
             SyndicationClient client = new SyndicationClient();
             Uri feedUri = new Uri("http://www.polban.ac.id/index.php?format=feed&type=rss");
-            List<FeedItem> list = new List<FeedItem>();
 
             try
             {
@@ -52,15 +51,13 @@ namespace PolbanNewsReader
                             feedItem.Link = item.Links[0].Uri;
                         }
 
-                        list.Add(feedItem);
+                        _Feeds.Add(feedItem);
                     }
                 }
-
-                return list;
             }
             catch (Exception)
             {
-                return null;
+                // do nothing
             }
         }
 
