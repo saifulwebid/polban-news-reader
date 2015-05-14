@@ -15,7 +15,21 @@
         <CollectionViewSource
         x:Name="itemsViewSource"
         Source="{Binding Items}"/>
+        
+        <Style x:Key="WebViewAppBarButtonStyle" TargetType="Button">
+            <Setter Property="AutomationProperties.AutomationId" Value="WebViewAppBarButton" />
+            <Setter Property="AutomationProperties.Name" Value="Lihat Artikel Lengkap" />
+            <Setter Property="Content" Value="&#xE12B;" />
+        </Style>
     </Page.Resources>
+    
+    <Page.TopAppBar>
+        <AppBar Padding="10,0,10,0">
+            <Grid>
+                <AppBarButton HorizontalAlignment="Right" Icon="World"  Label="Lihat Artikel Lengkap" VerticalAlignment="Top" Click="AppBarButton_Click"/>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:

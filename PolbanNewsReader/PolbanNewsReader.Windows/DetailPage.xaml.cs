@@ -66,6 +66,14 @@ namespace PolbanNewsReader
         /// session. The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            string itemTitle = (string)e.NavigationParameter;
+            FeedItem feedItem = FeedDataSource.GetItem(itemTitle);
+
+            if (feedItem != null)
+            {
+                this.contentView.Navigate(feedItem.Link);
+                this.DataContext = feedItem;
+            }
         }
 
         /// <summary>
@@ -102,5 +110,13 @@ namespace PolbanNewsReader
         }
 
         #endregion
+
+        private void contentView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e)
+        {
+            string errorString = "<p>Halaman tidak bisa dibuka.</p>";
+            errorString += "<p>Pesan kesalahan: " + e.WebErrorStatus.ToString() + "</p>";
+
+            contentView.NavigateToString(errorString);
+        }
     }
 }

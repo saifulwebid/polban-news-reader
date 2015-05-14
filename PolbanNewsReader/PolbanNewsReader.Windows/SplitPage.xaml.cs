@@ -278,5 +278,15 @@ namespace PolbanNewsReader
 
             contentView.NavigateToString(errorString);
         }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            FeedItem selectedItem = itemListView.SelectedItem as FeedItem;
+            if (selectedItem != null && this.Frame != null)
+            {
+                string itemTitle = selectedItem.Title;
+                this.Frame.Navigate(typeof(DetailPage), itemTitle);
+            }
+        }
     }
 }

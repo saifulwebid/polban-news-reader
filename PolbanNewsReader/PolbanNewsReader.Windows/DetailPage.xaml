@@ -43,8 +43,13 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
+        
+        <Border x:Name="contentViewBorder" BorderBrush="Gray" BorderThickness="2"
+                Grid.Row="1" Margin="120,15,20,20">
+            <WebView x:Name="contentView" NavigationFailed="contentView_NavigationFailed"/>
+        </Border>
     </Grid>
 </Page>
