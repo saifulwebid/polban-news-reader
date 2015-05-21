@@ -49,7 +49,7 @@
         
         <Border x:Name="contentViewBorder" BorderBrush="Gray" BorderThickness="2"
                 Grid.Row="1" Margin="120,15,20,20">
-            <WebView x:Name="contentView" NavigationFailed="contentView_NavigationFailed"/>
+            <WebView x:Name="contentView" NavigationCompleted="contentView_NavigationCompleted"/>
         </Border>
     </Grid>
 </Page>

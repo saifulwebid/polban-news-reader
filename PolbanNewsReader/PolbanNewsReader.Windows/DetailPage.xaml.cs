@@ -111,12 +111,15 @@ namespace PolbanNewsReader
 
         #endregion
 
-        private void contentView_NavigationFailed(object sender, WebViewNavigationFailedEventArgs e)
+        private void contentView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
         {
-            string errorString = "<p>Halaman tidak bisa dibuka.</p>";
-            errorString += "<p>Pesan kesalahan: " + e.WebErrorStatus.ToString() + "</p>";
+            if (args.IsSuccess == false)
+            {
+                string errorString = "<p>Halaman tidak bisa dibuka.</p>";
+                errorString += "<p>Pesan kesalahan: " + args.WebErrorStatus.ToString() + "</p>";
 
-            contentView.NavigateToString(errorString);
+                contentView.NavigateToString(errorString);
+            }
         }
     }
 }
