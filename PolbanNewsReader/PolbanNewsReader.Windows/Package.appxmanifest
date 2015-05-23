@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PolbanNewsReader.Windows.App">
-      <m2:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="#E07900">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>
