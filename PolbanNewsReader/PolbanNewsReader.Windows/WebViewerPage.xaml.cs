@@ -21,7 +21,7 @@ namespace PolbanNewsReader
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class DetailPage : Page
+    public sealed partial class WebViewerPage : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -45,7 +45,7 @@ namespace PolbanNewsReader
         }
 
 
-        public DetailPage()
+        public WebViewerPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);

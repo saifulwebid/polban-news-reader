@@ -279,7 +279,7 @@ namespace PolbanNewsReader
             if (selectedItem != null && this.Frame != null)
             {
                 string itemTitle = selectedItem.Title;
-                this.Frame.Navigate(typeof(DetailPage), itemTitle);
+                this.Frame.Navigate(typeof(WebViewerPage), itemTitle);
             }
         }
 
