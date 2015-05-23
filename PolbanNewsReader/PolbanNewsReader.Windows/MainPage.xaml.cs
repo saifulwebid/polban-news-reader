@@ -24,7 +24,7 @@ namespace PolbanNewsReader
     /// A page that displays a group title, a list of items within the group, and details for
     /// the currently selected item.
     /// </summary>
-    public sealed partial class SplitPage : Page
+    public sealed partial class MainPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -46,7 +46,7 @@ namespace PolbanNewsReader
             get { return this.navigationHelper; }
         }
 
-        public SplitPage()
+        public MainPage()
         {
             this.InitializeComponent();
 
