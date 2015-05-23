@@ -16,7 +16,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PolbanNewsReader.WindowsPhone.App">
-      <m3:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="transparent">
+      <m3:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="#E07900">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
