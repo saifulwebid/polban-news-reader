@@ -1,5 +1,6 @@
 ﻿<Page
     x:Class="PolbanNewsReader.MainPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PolbanNewsReader"
@@ -7,6 +8,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource PolbanBackgroundBrush}">
+
+    <Page.Resources>
+        <!-- Collection of items displayed by this page -->
+        <CollectionViewSource
+        x:Name="itemsViewSource"
+        Source="{Binding Items}"/>
+    </Page.Resources>
 
     <Grid x:Name="LayoutRoot">
 
