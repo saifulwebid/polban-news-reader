@@ -114,5 +114,15 @@ namespace PolbanNewsReader
         }
 
         #endregion
+
+        private void itemListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FeedItem selectedItem = itemListView.SelectedItem as FeedItem;
+            if (selectedItem != null && this.Frame != null)
+            {
+                string itemTitle = selectedItem.Title;
+                this.Frame.Navigate(typeof(TextViewerPage), itemTitle);
+            }
+        }
     }
 }

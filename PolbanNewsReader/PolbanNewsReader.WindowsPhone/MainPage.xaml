@@ -49,7 +49,7 @@
                       Margin="-10,-10,0,0"
                       IsItemClickEnabled="True"
                       ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-                      IsSwipeEnabled="False">
+                      IsSwipeEnabled="False" ItemClick="itemListView_ItemClick">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="FrameworkElement">
                         <Setter Property="Margin" Value="2,0,0,2" />
