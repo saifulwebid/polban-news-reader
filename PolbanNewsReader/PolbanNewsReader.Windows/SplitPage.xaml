@@ -21,6 +21,10 @@
             <Setter Property="AutomationProperties.Name" Value="Lihat Artikel Lengkap" />
             <Setter Property="Content" Value="&#xE12B;" />
         </Style>
+
+        <Storyboard x:Name="PopInStoryboard">
+            <PopInThemeAnimation Storyboard.TargetName="contentViewBorder" FromHorizontalOffset="400" />
+        </Storyboard>
     </Page.Resources>
     
     <Page.TopAppBar>

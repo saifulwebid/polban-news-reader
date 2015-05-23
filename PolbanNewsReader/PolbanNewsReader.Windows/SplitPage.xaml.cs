@@ -99,6 +99,8 @@ namespace PolbanNewsReader
         /// session.  The state will be null the first time a page is visited.</param>
         private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            PopInStoryboard.Begin();
+            
             // TODO: Assign a bindable group to Me.DefaultViewModel("Group")
             // TODO: Assign a collection of bindable items to Me.DefaultViewModel("Items")
             FeedDataSource feedDataSource = (FeedDataSource)App.Current.Resources["feedDataSource"];
