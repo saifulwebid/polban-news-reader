@@ -23,13 +23,29 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
-            <TextBlock Text="page title" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            <TextBlock Text="{StaticResource AppName}" Style="{ThemeResource TitleTextBlockStyle}" 
+                       Margin="0,12,0,0" Typography.Capitals="SmallCaps"/>
+            <TextBlock x:Name="FeedItemTitle" Margin="0,-6.5,0,26.5" Style="{ThemeResource SubheaderTextBlockStyle}"
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" TextWrapping="Wrap"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <ScrollViewer x:Name="itemDetail" AutomationProperties.AutomationId="ItemDetailScrollViewer"
+                          Grid.Row="1" Padding="20" HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollMode="Disabled"
+                          ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.ZoomMode="Disabled">
+                <Border x:Name="contentViewBorder" BorderBrush="{StaticResource PolbanSubtleBrush}"
+                        Background="AntiqueWhite" BorderThickness="6" Grid.Row="1">
+                    <RichTextBlock x:Name="BlogTextBlock" Foreground="Black" FontFamily="Segoe WP"
+                                   FontSize="24" Padding="10" VerticalAlignment="Bottom" />
+                </Border>
+            </ScrollViewer>
         </Grid>
     </Grid>
 </Page>

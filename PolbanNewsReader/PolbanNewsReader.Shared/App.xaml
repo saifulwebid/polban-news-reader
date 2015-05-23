@@ -6,6 +6,8 @@
     
     <Application.Resources>
         <ResourceDictionary>
+            <x:String x:Key="AppName">Polban News</x:String>
+            
             <local:FeedDataSource x:Key="feedDataSource" />
 
             <SolidColorBrush x:Key="PolbanBackgroundBrush" Color="#E07900" />
