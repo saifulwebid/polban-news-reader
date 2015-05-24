@@ -6,7 +6,7 @@
     
     <Application.Resources>
         <ResourceDictionary>
-            <x:String x:Key="AppName">Polban News</x:String>
+            <x:String x:Key="AppName">POLBAN News Reader</x:String>
             
             <local:FeedDataSource x:Key="feedDataSource" />
 
