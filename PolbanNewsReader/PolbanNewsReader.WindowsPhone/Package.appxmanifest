@@ -3,8 +3,8 @@
   <Identity Name="84038a61-30fc-49c3-818b-17e741f48333" Publisher="CN=Saiful" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="84038a61-30fc-49c3-818b-17e741f48333" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>PolbanNewsReader.WindowsPhone</DisplayName>
-    <PublisherDisplayName>Saiful</PublisherDisplayName>
+    <DisplayName>POLBAN News Reader</DisplayName>
+    <PublisherDisplayName>Muhammad Saiful Islam</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -16,10 +16,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PolbanNewsReader.WindowsPhone.App">
-      <m3:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="#E07900">
+      <m3:VisualElements DisplayName="POLBAN News Reader" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="Membaca berita terbaru dari website POLBAN (www.polban.ac.id)." ForegroundText="light" BackgroundColor="#ffdeb8">
         <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
         </m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+        <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#E07900" />
       </m3:VisualElements>
     </Application>
   </Applications>
