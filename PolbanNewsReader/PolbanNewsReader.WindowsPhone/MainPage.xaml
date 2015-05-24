@@ -35,7 +35,7 @@
             <TextBlock Text="page title" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>-->
         <StackPanel Grid.Row="0" Margin="24,17,0,28">
-            <TextBlock Text="{Binding Title}" Style="{ThemeResource HeaderTextBlockStyle}"
+            <TextBlock Text="POLBAN News" Style="{ThemeResource HeaderTextBlockStyle}"
                        CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
