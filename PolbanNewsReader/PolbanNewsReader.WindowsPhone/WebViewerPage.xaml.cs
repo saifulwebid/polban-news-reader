@@ -74,6 +74,7 @@ namespace PolbanNewsReader
             {
                 this.contentView.Navigate(feedItem.Link);
                 this.DataContext = feedItem;
+                this.FeedItemTitle.Text = feedItem.Title;
             }
         }
 
