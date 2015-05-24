@@ -117,7 +117,7 @@ namespace PolbanNewsReader
 
         private void itemListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FeedItem selectedItem = itemListView.SelectedItem as FeedItem;
+            FeedItem selectedItem = e.ClickedItem as FeedItem;
             if (selectedItem != null && this.Frame != null)
             {
                 string itemTitle = selectedItem.Title;

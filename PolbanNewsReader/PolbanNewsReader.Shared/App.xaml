@@ -12,6 +12,25 @@
 
             <SolidColorBrush x:Key="PolbanBackgroundBrush" Color="#E07900" />
             <SolidColorBrush x:Key="PolbanSubtleBrush" Color="#558CB6" />
+            
+            <DataTemplate x:Name="ListItemTemplate">
+                <Grid Margin="5,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="72" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition MaxHeight="54" />
+                    </Grid.RowDefinitions>
+                    
+                    <Border Background="{StaticResource PolbanSubtleBrush}" VerticalAlignment="Top">
+                    </Border>
+                    
+                    <TextBlock Grid.Column="1" Text="{Binding Title}" Margin="10,0,0,0"
+                               FontSize="20" TextWrapping="Wrap" MaxHeight="72" />
+                </Grid>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 

@@ -26,7 +26,8 @@
             <TextBlock Text="{StaticResource AppName}" Style="{ThemeResource TitleTextBlockStyle}" 
                        Margin="0,12,0,0" Typography.Capitals="SmallCaps"/>
             <TextBlock x:Name="FeedItemTitle" Margin="0,-6.5,0,26.5" Style="{ThemeResource SubheaderTextBlockStyle}"
-                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" TextWrapping="Wrap"/>
+                       CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" TextWrapping="Wrap"
+                       MaxHeight="200"/>
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
