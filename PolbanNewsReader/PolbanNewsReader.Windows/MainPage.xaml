@@ -149,7 +149,7 @@
 
                 <TextBlock x:Name="itemTitle" Text="{Binding Title}"
                            Style="{StaticResource SubheaderTextBlockStyle}"/>
-                <Border x:Name="contentViewBorder" BorderBrush="Gray" BorderThickness="2"
+                <Border x:Name="contentViewBorder" BorderBrush="{StaticResource PolbanSubtleBrush}" BorderThickness="2"
                         Grid.Row="1" Margin="0,15,0,20">
                     <Grid>
                         <WebView x:Name="contentView" NavigationCompleted="contentView_NavigationCompleted"/>

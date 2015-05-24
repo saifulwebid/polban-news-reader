@@ -67,6 +67,14 @@ namespace PolbanNewsReader
         /// session.  The state will be null the first time a page is visited.</param>
         private void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            string itemTitle = (string)e.NavigationParameter;
+            FeedItem feedItem = FeedDataSource.GetItem(itemTitle);
+
+            if (feedItem != null)
+            {
+                this.contentView.Navigate(feedItem.Link);
+                this.DataContext = feedItem;
+            }
         }
 
         /// <summary>
@@ -107,5 +115,10 @@ namespace PolbanNewsReader
         }
 
         #endregion
+
+        private void contentView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+
+        }
     }
 }
