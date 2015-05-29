@@ -1,0 +1,3 @@
+MainPackage=D:\4. Pribadi\Programming\Visual Studio\PolbanNewsReader\PolbanNewsReader\PolbanNewsReader.WindowsPhone\bin\Release\PolbanNewsReader.WindowsPhone_1.1.0.0_Bundle\PolbanNewsReader.WindowsPhone_1.1.0.0_AnyCPU.appx
+SymbolPackage=D:\4. Pribadi\Programming\Visual Studio\PolbanNewsReader\PolbanNewsReader\PolbanNewsReader.WindowsPhone\AppPackages\PolbanNewsReader.WindowsPhone_1.1.0.0_Test\PolbanNewsReader.WindowsPhone_1.1.0.0_AnyCPU.appxsym
+ResourcePack=D:\4. Pribadi\Programming\Visual Studio\PolbanNewsReader\PolbanNewsReader\PolbanNewsReader.WindowsPhone\bin\Release\PolbanNewsReader.WindowsPhone_1.1.0.0_Bundle\PolbanNewsReader.WindowsPhone_1.1.0.0_scale-100.appx

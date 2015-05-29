@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="84038a61-30fc-49c3-818b-17e741f48333" Publisher="CN=Saiful" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="84038a61-30fc-49c3-818b-17e741f48333" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="28416MuhammadSaifulIslam.POLBANNewsReader" Publisher="CN=A602F516-4A5D-449B-9D48-F7B9D36F29D2" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="f04b5e9c-d472-4ef7-819c-5e6ff7f8eabf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>POLBAN News Reader</DisplayName>
     <PublisherDisplayName>Muhammad Saiful Islam</PublisherDisplayName>
